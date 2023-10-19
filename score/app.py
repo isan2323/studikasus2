@@ -38,3 +38,8 @@ def edit_data(id):
 def Delete_data(id):
     db.execute("Delete from score where id = ?", id)
     return redirect("/")
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
